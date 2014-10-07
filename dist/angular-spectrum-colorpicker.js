@@ -43,9 +43,8 @@
           }
   
           var onChange = function(color) {
-            $scope.$apply(function() {
               setViewValue(color);
-            });
+              $scope.$digest();
           };
           var onToggle = function() {
             $input.spectrum('toggle');
